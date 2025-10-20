@@ -1,0 +1,28 @@
+{
+  "name": "blog-preview-card",
+  "version": "1.0.0",
+  "description": "Solution to the 'Blog Preview Card' challenge on Frontend Mentor",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlrnsnk/blog-preview-card.git"
+  },
+  "keywords": [
+    "frontendmentor",
+    "gulp",
+    "sass",
+    "frontend"
+  ],
+  "author": "Valeriy Anysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vlrnsnk/blog-preview-card/issues"
+  },
+  "homepage": "https://vlrnsnk.github.io/blog-preview-card",
+  "devDependencies": {
+    "gulp": "^5.0.1"
+  }
+}
