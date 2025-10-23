@@ -1,3 +1,24 @@
-body {
-  background-color: red;
-}
+// This file imports all other partials using the
+// modern @use and @forward module system.
+// Each directory has an _index.scss file to bundle its contents.
+
+// 1. Abstracts (Variables, Mixins, Functions)
+@use 'abstracts';
+
+// 2. Vendors (Third-party CSS)
+@use 'vendors';
+
+// 3. Base (Reset, Typography, Base styles)
+@use 'base';
+
+// 4. Layout (Header, Footer, Grid)
+@use 'layout';
+
+// 5. Components (Buttons, Cards, Forms)
+@use 'components';
+
+// 6. Pages (Page-specific styles)
+@use 'pages';
+
+// 7. Themes (Dark mode, etc.)
+@use 'themes';

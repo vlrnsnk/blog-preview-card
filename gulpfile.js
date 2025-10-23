@@ -4,7 +4,7 @@ import { deleteSync } from 'del';
 import htmlMin from 'gulp-html-minifier-terser';
 import sharpOptimizeImages from 'gulp-sharp-optimize-images';
 import webp from 'gulp-webp';
-import sass from 'sass';
+import * as sass from 'sass';
 import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
@@ -21,12 +21,16 @@ export const server = () => {
   browserSync.init({
     server: { baseDir: 'dist/' },
     notify: false,
+    open: false,
   });
   watch('dist/*.html').on('change', browserSync.reload);
 };
 
 /* ---------- Clean ---------- */
-export const clean = () => deleteSync(['dist']);
+export const clean = (done) => {
+  deleteSync(['dist']);
+  done();
+}
 
 /* ---------- Styles ---------- */
 export const styles = () => {
