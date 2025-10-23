@@ -63,7 +63,9 @@ export const copyFiles = () => {
 
 /* ---------- Copy images ---------- */
 export const copyImages = () => {
-  return src('src/img/**/*.{png,jpg,jpeg,svg,gif,webp}')
+  return src('src/img/**/*.{png,jpg,jpeg,svg,gif,webp}', {
+    encoding: false,
+  })
     .pipe(dest('dist/img'));
 };
 
