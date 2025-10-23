@@ -23,7 +23,6 @@ export const server = () => {
     notify: false,
     open: false,
   });
-  watch('dist/*.html').on('change', browserSync.reload);
 };
 
 /* ---------- Clean ---------- */
@@ -89,11 +88,17 @@ export const webpImages = () => {
     .pipe(dest('dist/img'));
 };
 
+/* ---------- BrowserSync reload helper ---------- */
+export const reload = (done) => {
+  browserSync.reload();
+  done();
+;}
+
 /* ---------- Watcher ---------- */
 export const watcher = () => {
   watch('src/sass/**/*.scss', styles);
-  watch('src/*.html', series(html, browserSync.reload));
-  watch('src/img/**/*.{jpg,jpeg,png,svg,gif,webp}', series(copyImages, webpImages));
+  watch('src/*.html', series(html, reload));
+  watch('src/img/**/*.{jpg,jpeg,png,svg,gif,webp}', series(copyImages, webpImages, reload));
 };
 
 /* ---------- Main tasks ---------- */
