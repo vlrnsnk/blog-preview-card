@@ -1,0 +1,10 @@
+@use '../abstracts/' as abstracts;
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: abstracts.$color-yellow;
+  padding: 0 24px;
+}

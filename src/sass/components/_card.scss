@@ -1,0 +1,6 @@
+@use '../abstracts/' as abstracts;
+
+.card {
+  background-color: abstracts.$color-white;
+  max-width: 384px;
+}
