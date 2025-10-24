@@ -15,5 +15,3 @@ indent_style = space
 indent_size = 2
 
 # File-specific overrides
-[*.html]
-indent_size = 4
