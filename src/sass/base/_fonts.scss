@@ -1,0 +1,16 @@
+/* Fonts */
+
+$figtree-fonts: (
+  500: 'Figtree-Medium.woff2',
+  800: 'Figtree-ExtraBold.woff2'
+);
+
+@each $weight, $file in $figtree-fonts {
+  @font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: #{$weight};
+    src: url('../fonts/#{$file}') format('woff2');
+    font-display: swap;
+  }
+}
