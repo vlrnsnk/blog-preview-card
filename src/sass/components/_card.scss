@@ -41,7 +41,14 @@
   }
 
   &__title {
+    transition: color 0.2s ease-in-out;
+
     @include abstracts.text-preset-1();
+
+    &:hover {
+      color: abstracts.$color-yellow;
+      cursor: pointer;
+    }
   }
 
   &__description {
