@@ -77,8 +77,8 @@ export const optimizeImages = () => {
     .pipe(
       sharpOptimizeImages({
         resize: false,
-        png_to_png: { quality: 80 },
-        jpg_to_jpg: { quality: 80, mozjpeg: true },
+        png: { quality: 80 },
+        jpg: { quality: 80, mozjpeg: true }, // works for both .jpg and .jpeg
       })
     )
     .pipe(dest('dist/img'));
@@ -107,13 +107,15 @@ export const watcher = () => {
 /* ---------- Main tasks ---------- */
 export const dev = series(
   clean,
-  parallel(copyFiles, copyImages, styles, html, webpImages),
-  parallel(server, watcher)
+  // parallel(copyFiles, copyImages, styles, html, webpImages),
+  parallel(copyFiles, copyImages, styles, html),
+  parallel(server, watcher),
 );
 
 export const build = series(
   clean,
-  parallel(copyFiles, optimizeImages, styles, html, webpImages)
+  // parallel(copyFiles, optimizeImages, styles, html, webpImages)
+  parallel(copyFiles, styles, html),
 );
 
 /* ---------- Default ---------- */
