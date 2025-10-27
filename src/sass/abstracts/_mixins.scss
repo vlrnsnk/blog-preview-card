@@ -1,24 +1,25 @@
 /* Text presets */
+@use 'functions' as *;
 
-@mixin text-preset($size, $weight) {
-  font-size: $size;
+@mixin text-preset($size-min, $size-max, $weight) {
+  font-size: fluid($size-min, $size-max);
   font-weight: $weight;
   line-height: 150%;
   letter-spacing: 0;
 }
 
 @mixin text-preset-1() {
-  @include text-preset(24px, 800);
+  @include text-preset(20, 24, 800);
 }
 
 @mixin text-preset-2() {
-  @include text-preset(16px, 500);
+  @include text-preset(14, 16, 500);
 }
 
 @mixin text-preset-3() {
-  @include text-preset(14px, 500);
+  @include text-preset(12, 14, 500);
 }
 
 @mixin text-preset-3-bold() {
-  @include text-preset(14px, 800);
+  @include text-preset(12, 14, 800);
 }
