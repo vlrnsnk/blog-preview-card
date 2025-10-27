@@ -56,7 +56,10 @@ export const copyFiles = () => {
     'src/*.ico',
     'src/site.webmanifest',
     'src/browserconfig.xml',
-  ], { base: 'src' })
+  ], {
+    base: 'src',
+    encoding: false,
+  })
     .pipe(dest('dist/'));
 };
 
