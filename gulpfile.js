@@ -115,7 +115,7 @@ export const dev = series(
 export const build = series(
   clean,
   // parallel(copyFiles, optimizeImages, styles, html, webpImages)
-  parallel(copyFiles, styles, html),
+  parallel(copyFiles, copyImages, styles, html),
 );
 
 /* ---------- Default ---------- */
