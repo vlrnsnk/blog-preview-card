@@ -9,7 +9,7 @@
   box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
 
   &__figure {
-    // margin-bottom: 24px;
+    margin-bottom: 24px;
   }
 
   &__image {
@@ -17,7 +17,6 @@
     height: 200px;
     border-radius: 10px;
     object-fit: cover;
-    margin-bottom: 24px;
     display: block;
   }
 
