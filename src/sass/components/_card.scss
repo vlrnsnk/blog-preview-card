@@ -49,6 +49,10 @@
       color: abstracts.$color-yellow;
       cursor: pointer;
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 
   &__description {
