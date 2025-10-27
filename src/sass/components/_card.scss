@@ -6,7 +6,7 @@
   border: 1px solid abstracts.$color-gray-950;
   border-radius: 20px;
   padding: 24px;
-  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 8px 8px 0 0 rgb(0 0 0);
 
   &__figure {
     margin-bottom: 24px;
@@ -32,6 +32,7 @@
     background-color: abstracts.$color-yellow;
     max-width: fit-content;
     border-radius: abstracts.$spacing-50;
+
     @include abstracts.text-preset-3-bold();
   }
 
@@ -44,16 +45,18 @@
   }
 
   &__description {
-    @include abstracts.text-preset-2();
     color: abstracts.$color-gray-500;
+
+    @include abstracts.text-preset-2();
   }
 
   &__footer {
     display: flex;
     gap: abstracts.$spacing-150;
     align-items: center;
-    @include abstracts.text-preset-3-bold();
     margin-top: 12px;
+
+    @include abstracts.text-preset-3-bold();
   }
 
 }

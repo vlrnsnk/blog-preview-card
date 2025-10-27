@@ -4,5 +4,6 @@
 @function fluid($min, $max) {
   $slope: math.div($max - $min, 1440 - 375);
   $intercept: $min - math.div(375 * ($max - $min), 1440 - 375);
+
   @return clamp(#{$min}px, calc(#{$intercept}px + #{$slope * 100}vw), #{$max}px);
 }
