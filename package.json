@@ -7,7 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp dev",
     "build": "gulp build",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "lint": "npm run editorconfig && npm run stylelint",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"src/sass/**/*.scss\""
   },
   "repository": {
     "type": "git",
@@ -25,6 +30,19 @@
     "url": "https://github.com/vlrnsnk/blog-preview-card/issues"
   },
   "homepage": "https://vlrnsnk.github.io/blog-preview-card",
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "> 0.2%",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.html",
+    "src/sass/**/*.scss"
+  ],
   "devDependencies": {
     "@types/browser-sync": "^2.29.0",
     "@types/gulp": "^4.0.17",
@@ -32,6 +50,7 @@
     "browser-sync": "^3.0.4",
     "cssnano": "^7.1.1",
     "del": "^8.0.1",
+    "gh-pages": "^6.3.0",
     "gulp": "^5.0.1",
     "gulp-html-minifier-terser": "^7.1.0",
     "gulp-htmlmin": "^5.0.1",
