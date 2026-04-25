@@ -17,40 +17,42 @@
       <h1 class="visually-hidden">Blog Preview Card</h1>
 
       <article class="card">
-        <figure class="card__figure">
-          <img
-            class="card__image"
-            src="./img/illustration-article.svg"
-            width="334"
-            height="200"
-            alt="Illustration of HTML & CSS article"
-          />
-        </figure>
-
-        <div class="card__content">
-          <p class="card__category">Learning</p>
-
-          <time class="card__date" datetime="2023-12-21">
-            Published 21 Dec 2023
-          </time>
-
-          <h2 class="card__title">HTML & CSS foundations</h2>
-
-          <p class="card__description">
-            These languages are the backbone of every website, defining structure, content, and presentation.
-          </p>
-
-          <footer class="card__footer">
+        <a class="card__link" href="/articles/html-css-foundations" aria-label="Read article: HTML & CSS foundations">
+          <figure class="card__figure">
             <img
-              class="card__avatar"
-              src="./img/image-avatar.webp"
-              width="32"
-              height="32"
-              alt="Greg Hooper avatar"
+              class="card__image"
+              src="./img/illustration-article.svg"
+              width="334"
+              height="200"
+              alt="Illustration of HTML & CSS article"
             />
-            <p class="card__author">Greg Hooper</p>
-          </footer>
-        </div>
+          </figure>
+
+          <div class="card__content">
+            <p class="card__category">Learning</p>
+
+            <time class="card__date" datetime="2023-12-21">
+              Published 21 Dec 2023
+            </time>
+
+            <h2 class="card__title">HTML & CSS foundations</h2>
+
+            <p class="card__description">
+              These languages are the backbone of every website, defining structure, content, and presentation.
+            </p>
+
+            <footer class="card__footer">
+              <img
+                class="card__avatar"
+                src="./img/image-avatar.webp"
+                width="32"
+                height="32"
+                alt="Greg Hooper avatar"
+              />
+              <p class="card__author">Greg Hooper</p>
+            </footer>
+          </div>
+        </a>
       </article>
     </main>
   </body>

@@ -8,13 +8,24 @@
   padding: 24px;
   box-shadow: 8px 8px 0 0 rgb(0 0 0);
 
+  &__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+
+    &:focus {
+      outline: 3px solid #2563eb;
+      outline-offset: 4px;
+    }
+  }
+
   &__figure {
     margin-bottom: 24px;
   }
 
   &__image {
     width: 100%;
-    height: 200px;
+    height: auto;
     border-radius: 10px;
     object-fit: cover;
     display: block;
@@ -45,7 +56,8 @@
 
     @include abstracts.text-preset-1();
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: abstracts.$color-yellow;
       cursor: pointer;
     }

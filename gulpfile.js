@@ -95,7 +95,7 @@ export const webpImages = () => {
 export const reload = (done) => {
   browserSync.reload();
   done();
-;}
+};
 
 /* ---------- Watcher ---------- */
 export const watcher = () => {
